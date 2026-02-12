@@ -111,8 +111,10 @@ RUN printf '%s\\n' \
 # CUSTOM: EmulationStation (RetroPie fork)
 # =========================
 RUN apt update && apt install -y \
-    libboost-system-dev libboost-filesystem-dev libboost-date-time-dev libboost-locale-dev \
-    libeigen3-dev libsm-dev \
+    libboost-system-dev libboost-filesystem-dev libboost-date-time-dev libboost-locale-dev libboost-thread-dev \
+    libeigen3-dev libsm-dev libssl-dev \
+    libx11-dev libxext-dev libxrandr-dev libxinerama-dev libxi-dev \
+    libgl1-mesa-dev libegl1-mesa-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --recursive https://github.com/RetroPie/EmulationStation.git /tmp/EmulationStation \
