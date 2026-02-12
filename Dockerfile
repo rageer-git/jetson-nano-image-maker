@@ -7,7 +7,7 @@ RUN apt install -y sudo
 RUN apt install -y ssh
 RUN apt install -y netplan.io
 
-# resizerootfs fs
+# resizerootfs f s
 RUN apt install -y udev
 RUN apt install -y parted
 
