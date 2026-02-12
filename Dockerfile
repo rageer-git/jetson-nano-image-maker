@@ -123,7 +123,7 @@ RUN git clone --recursive https://github.com/RetroPie/EmulationStation.git /tmp/
     && rm -rf /tmp/EmulationStation
 
 # Openbox autostart: lanzar EmulationStation
-# (Openbox corre /etc/xdg/openbox/autostart y luego ~/.config/openbox/autostart al iniciar sesión) [page:7]
+# Openbox ejecuta ~/.config/openbox/autostart al iniciar sesión. [https://openbox.org/help/Autostart](https://openbox.org/help/Autostart)
 RUN mkdir -p /home/jetson/.config/openbox /home/jetson/bin
 RUN printf '%s\n' \
   '#!/bin/bash' \
