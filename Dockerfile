@@ -115,6 +115,7 @@ RUN apt update && apt install -y \
     libeigen3-dev libsm-dev libssl-dev \
     libx11-dev libxext-dev libxrandr-dev libxinerama-dev libxi-dev \
     libgl1-mesa-dev libegl1-mesa-dev \
+    libvlc-dev libvlccore-dev vlc-plugin-base \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --recursive https://github.com/RetroPie/EmulationStation.git /tmp/EmulationStation \
