@@ -54,6 +54,16 @@ RUN rm -rf /opt/nvidia/l4t-packages
 
 COPY root/ /
 
+# L4T Graphics + X11 (libnvrm.so y stack completo)
+RUN apt install -y -o Dpkg::Options::="--force-overwrite" \
+    nvidia-l4t-x11 \
+    nvidia-l4t-graphics-demos \
+    nvidia-l4t-wayland \
+    nvidia-l4t-weston \
+    nvidia-l4t-xusb-firmware \
+    xserver-xorg-video-nouveau \
+    && rm -rf /opt/nvidia/l4t-packages
+
 # Usuario
 RUN useradd -ms /bin/bash jetson
 RUN echo 'jetson:jetson' | chpasswd
